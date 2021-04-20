@@ -9,9 +9,9 @@
 
 Elina submitted seperately from the initial group “megkiilina”.
 
-The text of the narrative and dataset remain the same as with the original group “megkiilina” but the website and graph development as well as the interaction development in the repository is only part of Elina's submission.
+The text of the narrative and dataset remain the same as with the original group “megkiilina” but ***the website and graph development as well as the interaction development in this repository is only part of Elina's submission.***
 
-**The dataset** (same as group “megkiilina”)
+**The dataset** *(same as group “megkiilina”)*
 
 The dataset includes over 100 technologies in its collection, but many of the technologies have very sparse data across all the countries and years. We decided to focus on communications inventions because it seemed to follow naturally from thinking about worldwide adoption of technology, plus the data for 20th century communications inventions was some of the most dense available in the CHAT dataset.
 
@@ -22,12 +22,12 @@ The dataset had many gaps with many years missing data for most of the countries
 **Data filtering - different time periods**
 
 For each technology, the line charts display a different year range. The population is the exception showing the population for each country.
-The Telephone Line Chart year range is [1876 -2000].
-The Radio Line Chart year range is [1920 -2000].
-The Cellular Line Chart phone year range is [1980 -2000].
-The Internet Line Chart year range is [1990 -2000].
-The Population Line Chart year range is [1960 -2000].
-The Internet Line Chart year range is [1992 -2000].
+-The Telephone Line Chart year range is [1876 -2000].
+-The Radio Line Chart year range is [1920 -2000].
+-The Cellular Line Chart phone year range is [1980 -2000].
+-The Internet Line Chart year range is [1990 -2000].
+-The Population Line Chart year range is [1960 -2000].
+-The Internet Line Chart year range is [1992 -2000].
 
 **Website and Graphs Interactions**
 
