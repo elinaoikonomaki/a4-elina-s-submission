@@ -7,7 +7,7 @@
 
 ### NOTE ABOUT THE SUBMISSION
 
-Elina submitted seperately from the initial group “megkiilina”.
+Elina submitted seperately from the initial group [“megkiilina”](https://github.com/6859-sp21/a4-megkiilina).
 
 The text of the narrative and dataset remain the same as with the original group “megkiilina” but ***the website and graph development as well as the interaction development in this repository is only part of Elina's submission.***
 
@@ -19,7 +19,7 @@ The dataset includes over 100 technologies in its collection, but many of the te
 
 The dataset had many gaps with many years missing data for most of the countries. That was a particurlar challenge for filtering the nulls and designing correctly the line graphs. In the line graphs the missing data are shown as gaps in the lines for each technology. 
 
-### Data filtering - different time periods
+### Data filtering - Different year ranges
 
 For each technology, the line charts display a different year range. The population is the exception showing the population for each country.
 - The Telephone Line Chart year range is [1876 -2000].
