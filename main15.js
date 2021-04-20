@@ -226,12 +226,11 @@ const tooltipGDP = d3.select("#"+selector.slice(1)).append("div")
     .attr("id",selector.slice(1)+"GDP"+"tooltip")
     .style("opacity", 0)
     .style("color","#dee7fa")
-    .style("position", "absolute");
-    //.style("background-color", "white")
-    //.style("border", "solid")
-    //.style("border-width", "2px")
-    //.style("border-radius", "5px")
-    //.style("padding", "5px");
+    .style("position", "absolute")
+    .style("border", "solid")
+    .style("border-width", "2px")
+    .style("border-radius", "5px")
+    .style("padding", "5px");
 
 console.log(tooltipGDP);
 
@@ -402,10 +401,53 @@ lineGraphEnter.selectAll("circles")
             .delay(30)
             .duration(200)
             .style("opacity", 1);
-        tooltipGDP.html("Year: "+d.year)
-            .style("left", (d3.event.pageX + 25) + "px")
-            .style("top", (d3.event.pageY) + "px");
-        console.log(tooltipGDP.html("Year: "+d.year));
+       
+       // tooltip -- text appear for each line chart 
+            
+        if (filtered_data == dataEvent_1){   
+          if(d.telephone != '0' && d.xlrealgdp!='0'){
+            tooltipGDP.html("Year: "+d.year +"<br/>"+ "GDP: "+ d.xlrealgdp +"<br/>"+ "Telephone Users: "+ d.telephone)
+	            .style("left", (d3.event.pageX + 25) + "px")
+	            .style("top", (d3.event.pageY) + "px");
+	        //console.log(tooltipGDP.html("Year: "+d.year +"<br/>"+ "GDP: "+ d.xlrealgdp +"<br/>"+ "Telephone Users: "+ d.telephone));
+            }
+      	}else if (filtered_data == dataEvent_2){
+            if(d.radio != '0'&& d.xlrealgdp!='0'){
+            	tooltipGDP.html("Year: "+d.year +"<br/>"+ "GDP: "+ d.xlrealgdp+ "<br/>"+ "Radio Users: "+ d.radio)
+	            	.style("left", (d3.event.pageX + 25) + "px")
+	            	.style("top", (d3.event.pageY) + "px");
+	        	//console.log(tooltipGDP.html("Year: "+d.year +"<br/>"+ "GDP: "+ d.xlrealgdp+ "<br/>"+ "Radio Users: "+ d.radio));
+	        }
+      	}else if (filtered_data == dataEvent_3){
+          if(d.cellphone != '0'&& d.xlrealgdp!='0'){
+	          tooltipGDP.html("Year: "+d.year +"<br/>"+ "GDP: "+ d.xlrealgdp+ "<br/>"+ "Cellphone Users: "+ d.cellphone)
+		            .style("left", (d3.event.pageX + 25) + "px")
+		            .style("top", (d3.event.pageY) + "px");
+		        //console.log(tooltipGDP.html("Year: "+d.year +"<br/>"+ "GDP: "+ d.xlrealgdp+ "<br/>"+ "Cellphone Users: "+ d.cellphone));
+		   }
+	    }else if (filtered_data == dataEvent_4){
+	        if(d.internetuser != '0'&& d.xlrealgdp!='0'){
+	        	tooltipGDP.html("Year: "+d.year +"<br/>"+ "GDP: "+ d.xlrealgdp+ "<br/>"+ "Internet Users: "+ d.internetuser)
+		            .style("left", (d3.event.pageX + 25) + "px")
+		            .style("top", (d3.event.pageY) + "px");
+		        //console.log(tooltipGDP.html("Year: "+d.year +"<br/>"+ "GDP: "+ d.xlrealgdp+ "<br/>"+ "Internet Users: "+ d.internetuser));
+	        }
+	    }else if (filtered_data == dataEvent_5){
+	        if(d.xlpopulation != '0'&& d.xlrealgdp!='0'){
+	        	tooltipGDP.html("Year: "+d.year +"<br/>"+ "GDP: "+ d.xlrealgdp+ "<br/>"+ "Population: "+ d.xlpopulation)
+		            .style("left", (d3.event.pageX + 25) + "px")
+		            .style("top", (d3.event.pageY) + "px");
+		        //console.log(tooltipGDP.html("Year: "+d.year +"<br/>"+ "GDP: "+ d.xlrealgdp+ "<br/>"+ "Population: "+ d.xlpopulation));
+	        }
+	    }else if (filtered_data == dataEvent_6){
+	        if(d.internetuser != '0'&& d.xlrealgdp!='0'){
+	        	tooltipGDP.html("Year: "+d.year +"<br/>"+ "GDP: "+ d.xlrealgdp + "<br/>"+ "Internet Users: "+ d.internetuser)
+		            .style("left", (d3.event.pageX + 25) + "px")
+		            .style("top", (d3.event.pageY) + "px");
+		        //console.log(tooltipGDP.html("Year: "+d.year +"<br/>"+ "GDP: "+ d.xlrealgdp+ "<br/>"+ "Internet Users: "+ d.internetuser));
+	        }
+      	};    
+        
 
       // points appear on mouseover
         const selection = d3.select(this).raise();
@@ -650,12 +692,10 @@ lineGraphEnter.selectAll("circles")
         .style("opacity", 0)
         .style("color","#dee7fa")
         .style("position", "absolute")
-        .style("padding","10px");
-        //.style("background-color", "white")
-        //.style("border", "solid")
-        //.style("border-width", "2px")
-        //.style("border-radius", "5px")
-        //.style("padding", "5px");
+        .style("border", "solid")
+        .style("border-width", "2px")
+        .style("border-radius", "5px")
+        .style("padding", "5px");
 
     console.log(tooltipYEAR);
 
@@ -827,7 +867,7 @@ lineGraphEnter.selectAll("circles")
                         tooltipYEAR.html("Telephone Users:  "+d.telephone)
                             .style("left", (d3.event.pageX + 25) + "px")
                             .style("top", (d3.event.pageY) + "px");
-                        console.log(tooltipYEAR.html("Telephone Users: "+d.telephone));
+                        console.log(tooltipYEAR.html("Year: "+d.year +"<br/>"+ "GDP: "+ d.xlrealgdp+ "<br/>"+"Telephone Users: "+d.telephone));
                         }
                   }else if (filtered_data == dataEvent_2){
                         if(d.radio != '0'&& d.year!='0'){
@@ -839,7 +879,7 @@ lineGraphEnter.selectAll("circles")
                           tooltipYEAR.html("Radio Users = "+d.radio)
                               .style("left", (d3.event.pageX + 25) + "px")
                               .style("top", (d3.event.pageY) + "px");
-                          console.log(tooltipYEAR.html("Radio Users: "+d.radio));
+                          console.log(tooltipYEAR.html("Year: "+d.year +"<br/>"+ "GDP: "+ d.xlrealgdp+ "<br/>"+"Radio Users: "+d.radio));
                         }
                   }else if (filtered_data == dataEvent_3){
                       if(d.cellphone != '0'&& d.year!='0'){
@@ -851,7 +891,7 @@ lineGraphEnter.selectAll("circles")
                           tooltipYEAR.html("Cellphone Users = "+d.cellphone)
                               .style("left", (d3.event.pageX + 25) + "px")
                               .style("top", (d3.event.pageY) + "px");
-                          console.log(tooltipYEAR.html("Cellphone Users: "+d.cellphone));
+                          console.log(tooltipYEAR.html("Year: "+d.year +"<br/>"+ "GDP: "+ d.xlrealgdp+ "<br/>"+"Cellphone Users: "+d.cellphone));
                       }
                   }else if (filtered_data == dataEvent_4){
                     if(d.internetuser != '0'&& d.year!='0'){
@@ -863,7 +903,7 @@ lineGraphEnter.selectAll("circles")
                           tooltipYEAR.html("Internet Users = "+d.internetuser)
                               .style("left", (d3.event.pageX + 25) + "px")
                               .style("top", (d3.event.pageY) + "px");
-                          console.log(tooltipYEAR.html("Internet Users: "+d.internetuser));
+                          console.log(tooltipYEAR.html("Year: "+d.year +"<br/>"+ "GDP: "+ d.xlrealgdp+ "<br/>"+"Internet Users: "+d.internetuser));
                     }
                   }else if (filtered_data == dataEvent_5){
                     if(d.xlpopulation != '0'&& d.year!='0'){
@@ -875,7 +915,7 @@ lineGraphEnter.selectAll("circles")
                           tooltipYEAR.html("Population = "+d.xlpopulation)
                               .style("left", (d3.event.pageX + 25) + "px")
                               .style("top", (d3.event.pageY) + "px");
-                          console.log(tooltipYEAR.html("Population: "+d.xlpopulation));
+                          console.log(tooltipYEAR.html("Year: "+d.year +"<br/>"+ "GDP: "+ d.xlrealgdp+ "<br/>"+"Population: "+d.xlpopulation));
                     }
                   }else if (filtered_data == dataEvent_6){
                     if(d.internetuser != '0'&& d.year!='0'){
@@ -887,7 +927,7 @@ lineGraphEnter.selectAll("circles")
                           tooltipYEAR.html("Internet Users = "+d.internetuser)
                               .style("left", (d3.event.pageX + 25) + "px")
                               .style("top", (d3.event.pageY) + "px");
-                          console.log(tooltipYEAR.html("Internet Users: "+d.internetuser));
+                          console.log(tooltipYEAR.html("Year: "+d.year +"<br/>"+ "GDP: "+ d.xlrealgdp+ "<br/>"+"Internet Users: "+d.internetuser));
 
 
                     };};   
