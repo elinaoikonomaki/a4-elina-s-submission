@@ -33,7 +33,7 @@ For each technology, the line charts display a different year range. The populat
 
 The webpage is divided into sections for each technology, each containing two columns. The left columns contains the narrative with the historical events and the technologies and the right columns contains the different line graphs for each technology. When scrolling up/down sections of the narrative appear and disappear respectively to the timeline.  
 
-### Switch between Line Charts
+### Switching between Line Charts
 
 The right column contains two different line charts for each technology, one showing the technology vs GDP and the other showing the technology vs YEAR. The population is the exception showing the population for each country instead of the technology on the y-axis. The two buttons on the top left allow for switching between the different line charts for each section. 
 
