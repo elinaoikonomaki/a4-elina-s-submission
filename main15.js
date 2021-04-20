@@ -507,7 +507,6 @@ lineGraphEnter.selectAll("circles")
           .style("fill", "#dee7fa")
           .text("CLICK TO FILTER BY COUNTRY: ")
           .attr("font-weight","bold")
-          .att("font-size","10px")
           .attr("text-anchor", "left")
           .style("alignment-baseline", "middle"); 
 
@@ -991,7 +990,6 @@ lineGraphEnter.selectAll("circles")
           .attr("y", 435) // 430 is where the first rect appears. 
           .style("fill", "#dee7fa")
           .text("CLICK TO FILTER BY COUNTRY: ")
-          .attr("font-size","10px")
           .attr("font-weight","bold")
           .attr("text-anchor", "left")
           .style("alignment-baseline", "middle");
