@@ -1,0 +1,206 @@
+<!DOCTYPE html> 
+<html> 
+  <head>
+    <link rel="stylesheet" href="style.css">
+		<script src="https://d3js.org/d3.v5.min.js">		</script>
+    <script src="https://d3js.org/d3-dsv.v1.min.js"></script>
+    <script src="https://d3js.org/d3-fetch.v2.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="jquery.tipsy.js"></script>
+    <!--<script src="lib/d3v4+jetpack.js"></script>-->
+
+    <script src="main15.js" defer></script>
+  </head>
+
+  <body>
+    <div id='intro'>
+        <h1>Atlas of Telecommunication Technology in the 20th Century</h1>
+        <div id="authors">
+            Kii Kang Elina Oikonomaki Megan Prakash 
+        </div>
+
+    <div class="body-copy">
+            Humanity worldwide is continually developing new technology. Innovations such
+            as the telephone, TV, and internet permanently change global communication, and
+            adoption of novel technology is very disproportionate between countries.
+            <p>
+            Throughout the history of technology adoption documented in our dataset, a
+            country's GDP is strongly correlated with how quickly it is able to adopt
+            its use of a technology per capita. However, particular smaller countries like Japan and Germany
+            often acquire technology disproportionately quickly.
+            <p>
+            Scroll on to see how these trends manifest throughout communications technology in the 20th century.
+      </div><br>
+    <div style="font-size: 9pt; font-style: italic;">
+            All y-axes are log scale and describe the total number of devices in a given country in a particular year.
+            We chose not to do technology per capita, because the rate of technology acquisition is not related to
+            a country’s population.
+            <p>
+            The issue with relating the two is particularly noticeable with the extremely
+            populous China and India, where a large segment of the population is less privileged with access to new
+            technology. Measuring technology per capita causes those countries to score very low compared to the rest
+            of the world. On the other hand, technology acquisition showed a strong correlation with country GDP.
+            <p>
+            Dataset:
+            <a href="https://github.com/datasets/historical-adoption-of-technology" target="_blank">
+                Cross-country Historical Adoption of Technology (CHAT) dataset </a> with discussion
+            <a href="https://www.nber.org/system/files/working_papers/w15319/w15319.pdf" target="_blank">here.</a>
+        </div>
+    </div> 
+    
+      <div id= 'section1' class="rows">
+          <div class="inner">
+            <h2>1877</h2>
+            <h3>Invention of the Telephone</h3>
+            <p>1876 saw the invention of the telephone by Alexander Graham Bell in the USA, who later visited
+                Japan personally in 1877 to demonstrate the technology. [2]
+                From 1876, the USA led the world in telephone use, reaching as many as 180 million telephones in 1980
+                while the rest of the world adopted telephones much more slowly. In particular, Japan had
+                the next most telephones, at 48 million when the U.S. reached its peak.</p>
+            <p>1876 saw the invention of the telephone by Alexander Graham Bell in Boston, USA, which other countries soon
+                rushed to replicate [1]. The most successful countries of the century in telephone acquisition were the USA
+                and Germany, who had rapidly set up commercial telephone manufacturing by 1877 [2]. The USA led the world in
+                adopting telephones with 1.3 million telephones by 1900, while Germany came in second with 306,000.
+              </p>
+            </div>
+            <div class="graph">
+              <button class = "buttonGDP"onclick="turnOnGDP(1)">Show GDP Graph</button>
+              <button class = "buttonYEAR"onclick="turnOnYEAR(1)">Show YEAR Graph</button>   
+              <div id="lineChart1"></div>
+            </div>
+          </div>
+      <div id= 'section2' class="rows">
+          <div class="inner">
+            <h2>1920</h2>
+            <h3>Invention of the Radio</h3>
+            <p>
+            Radio was patented in 1896 by Guglielmo Marconi, and the world began to develop applications for
+            this novel long-range communication technology. In particular, the 1910s saw the development
+            of entertainment broadcast stations, radio communications for aircraft, and even the early stages
+            of television, using radio to broadcast images.</p>
+            <h2>1980</h2>
+            <h3>First commercial radio broadcast</h3>
+            <p>
+            “On November 2, 1920, station KDKA made the nation's first commercial broadcast
+            (a term coined by Conrad himself). They chose that date because it was election day,
+             and the power of radio was proven when people could hear the results of the Harding-Cox
+              presidential race before they read about it in the newspaper.” [1]
+              <a href = "http://www.pbs.org/wgbh/aso/databank/entries/dt20ra.html" target = "_blank">Information about radio.</a>
+              </p>
+          </div>
+          <div class="graph">
+            <button class = "buttonGDP"onclick="turnOnGDP(2)">Show GDP Graph</button>
+            <button class = "buttonYEAR"onclick="turnOnYEAR(2)">Show YEAR Graph</button>
+            <div id="lineChart2"></div>
+          </div>  
+        </div>
+        <div id= 'section3' class="rows">  
+          <div class="inner">
+            <h2>1983</h2>
+            <h3>First commercially available cellular phone</h3>
+            <p>
+            Though the world’s first cellular network had already been launched in Japan by Nippon Telegraph and
+            Telephone in 1979, it was not until 1983 when commercial cellular phone communication became available.
+            The first 1G network was launched in the USA by Chicago-based Ameritech, shortly followed by the DynaTAC
+            8000X, Motorola’s first commercial portable cellular phone.  [5] In the following graphs, the USA’s and
+            Japan’s early access to cellular phone technology is clear, though Germany is quick to catch up by 1986.
+            </p>
+          </div>
+          <div class="graph">
+            <button class = "buttonGDP"onclick="turnOnGDP(3)">Show GDP Graph</button>
+            <button class = "buttonYEAR"onclick="turnOnYEAR(3)">Show YEAR Graph</button>  
+            <div id="lineChart3"></div>
+          </div>
+        </div>
+        <div id= 'section4' class="rows"> 
+          <div class="inner">
+            <h2>1989</h2>
+            <h3>Invention of the World Wide Web</h3>
+            <p>
+            The World Wide Web was invented in 1989 by Sir Tim Berners-Lee, an English contractor at CERN in
+            Switzerland. Berners-Lee, in particular, was the first to use computer networking technologies and markup
+            languages such as HTML to create an international, publicly-accessible network for sharing information. The
+            early adopters of the Web were academic research institutions who were peers of Berners-Lee and CERN and
+            quickly published research work as well as webcomics and animated images. [7]
+            </p>
+            <p>
+            The creation of the internet predates the World Wide Web by many decades, and internet innovation was
+            primarily concentrated in the USA with collaborators in the UK and in France [6]. However, by 1995,
+            it’s clear that Germany and Japan are once again disproportionately ahead of with Internet users
+            relative to their GDP, while the USA is a full order of magnitude ahead with 25.2 million users
+            compared to Japan and Germany’s 2 million.
+            </p>
+          </div>
+          <div class="graph">
+            <button class = "buttonGDP"onclick="turnOnGDP(4)">Show GDP Graph</button>
+            <button class = "buttonYEAR"onclick="turnOnYEAR(4)">Show YEAR Graph</button>
+            <div id="lineChart4"></div> 
+          </div> 
+        </div>
+        <div id= 'section5' class="rows">  
+          <div class="inner">
+            <h2>1991</h2>
+            <h3>The Fall of the USSR</h3>
+            <p>
+            The fall of the USSR in 1991 causes a distinct anomaly in the trend of world superpowers dominating
+            technology acquisition. The USSR's radio usage drastically falls post-1990, coinciding with a jump
+            upwards in China's usage.</p>
+          </div>
+          <div class="graph">
+            <button class = "buttonGDP"onclick="turnOnGDP(5)">Show GDP Graph</button>
+            <button class = "buttonYEAR"onclick="turnOnYEAR(5)">Show YEAR Graph</button>  
+            <div id="lineChart5"></div>
+          </div>
+        </div>
+        <div id= 'section6'class="rows"> 
+          <div class="inner">
+            
+            <h3>Fall of the Soviet Union</h3>
+            <p>1992 on wards</p>
+            <p>
+            A noticeable quirk in the dataset is related to the fall of the Soviet Union in 1991. On a
+            significant number of technologies, Russia (considered to be the same bucket as the Soviet Union
+            in this dataset) dipped significantly in technology usage starting 1990. While it is known that
+            multitudes of Soviet  engineers and scientists left Russia following the dissolution of the USSR [8],
+            a more likely explanation is that pre-1991, the “Russia” label of the dataset included the entire USSR.
+            On the other hand, post-1991 it only includes the country of Russia and none of the sovereign states
+            formed after the USSR’s collapse. The following graphs of population vs. GDP and population vs. year
+            corroborate this guess, since it’s clear that the population of “Russia” dips after 1991.
+            This dip is also apparent in the earlier graph about radio usage.
+            </p>
+
+          </div> 
+          <div class="graph">
+            <button class = "buttonGDP"onclick="turnOnGDP(6)">Show GDP Graph</button>
+            <button class = "buttonYEAR"onclick="turnOnYEAR(6)">Show YEAR Graph</button> 
+            <div id="lineChart6"></div> 
+          </div>
+        
+
+    </div>
+
+</body>
+<script>
+
+let targets = document.querySelectorAll('.rows');
+
+window.addEventListener("scroll", function(){
+  let doc = document.documentElement;
+  let top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
+  
+  let windowHeight = window.innerHeight;
+  
+  for (i = 0; i < targets.length; ++i) {
+    let target = targets[i];
+    if(target.offsetTop < (top + (windowHeight/2))) {
+      target.classList.add("visible");
+    }
+    else {
+      target.classList.remove("visible");
+    }
+  }
+});
+
+</script>
+  
+</html>

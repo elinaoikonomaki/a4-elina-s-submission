@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css?family=Thasadith:400,700');
+
+body{
+  margin: 0px auto;
+  font-family: "JetBrains Mono",monospace;
+  font-size: 11pt;
+  color: #e0e0e0;
+  background-color: #1d1e38;
+}
+
+h1 {
+  text-align: center;
+  
+}
+
+#authors{
+  text-align: center;
+  font-size: 18px;
+  font-style: italic;
+  text-align: center;
+  color: #ccd4e6;
+  margin-top: 20px;
+  margin-bottom: 30px;
+
+
+}
+
+h3 {
+  text-align: center;
+  color: #ccd4e6;
+}
+
+h2 {
+  text-align: center;
+  color: white;
+}
+
+#intro{
+  height:400px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  margin-right: 60px;
+  margin-left: 60px;
+
+}
+
+.rows {
+  display: flex;
+  height:600px;
+  opacity: 0;
+  transition: .5s ease all;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  
+}
+
+.rows.visible {
+  opacity: 1;}
+
+
+.inner{
+  flex: 30%; 
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.graph{
+  flex: 70%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.legend {
+  font-family: SourceSansPro-Light;
+  font-size: 10pt;
+  margin-bottom:0px;
+  fill: #231F20; 
+  } 
+.legend-off {
+  font-family: SourceSansPro-Light;
+  font-size: 10pt;
+  margin-bottom:0px;
+  fill: #231F20; 
+  }
+.legend-select {
+  font-family: SourceSansPro-Bold;
+  font-size: 10pt;
+  margin-bottom:0px;
+  fill: #231F20; 
+  }
+
+/* TOOLTIP */
+.tooltip {
+fill: white;
+color:white;
+font-family: Georgia;
+font-size: 15px;
+}
+
+.buttonGDP:focus {
+  background-color: #dee7fa; 
+  border:1px solid #dee7fa;
+  font-family: "JetBrains Mono",monospace;
+  font-weight: bold;
+  color: black;
+  outline: none;
+  padding: 10px 14px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  cursor: pointer;
+  float: left;
+}
+
+.buttonGDP {
+  background-color: #04086b; /* Green */
+  border:1px solid gray;
+  font-family: "JetBrains Mono",monospace;
+  font-weight: normal;
+  color: white;
+  outline: none;
+  padding: 10px 14px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  cursor: pointer;
+  float: left;
+}
+
+.buttonGDP:hover {
+  background-color: #dee7fa;
+  border: none;
+  color: #090d80;
+}
+
+
+.buttonYEAR:focus{
+  background-color: #dee7fa; 
+  border:1px solid #dee7fa;
+  font-family: "JetBrains Mono",monospace;
+  font-weight: bold;
+  color: black;
+  outline: none;
+  padding: 10px 14px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  cursor: pointer;
+  float: left;
+
+}
+.buttonYEAR {
+  background-color: #04086b; 
+  border:1px solid gray;
+  font-family: "JetBrains Mono",monospace;
+  font-weight: normal;
+  color: white;
+  outline: none;
+  padding: 10px 14px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  cursor: pointer;
+  float: left;
+}
+
+.buttonYEAR:hover {
+  background-color: #dee7fa;
+  border: none;
+  color: #090d80;
+}
+
+
+
+svg {
+    font-family: "JetBrains Mono",monospace;
+}
+
+.line {
+  stroke-width: 2;
+  fill: none;
+}
+
+.axis path {
+  stroke: #dee7fa;
+}
+
+.text {
+  font-size: 12px;
+}
+
+.title-text {
+  font-size: 12px;
+}
