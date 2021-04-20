@@ -1,5 +1,5 @@
 
-//--------Adding functionality to the buttons ---------------------//
+//--------Adding functionality to the buttons for switching between Graphs ---------------------//
 
 function turnOnGDP(number){
   console.log("turnOnGDP");
@@ -46,9 +46,6 @@ var dataset = d3.dsv(",", "Final_Cleaned_Data22.csv", function(d) {
 }).then(function(data) {
   
   //------filtering & creating datasets for each chart------//
-  //var keys2 = data.columns.slice(0);
-  //var name = data.country_name;
-  //console.log(data.country_name);
 
   viz_countries = ["China","Germany","India","Japan","Russia","United States"]
   const dataEvent_2 = data.filter((d,i) => d.year >= 1920 && d.year <= 2000)
@@ -242,10 +239,6 @@ console.log(tooltipGDP);
     var lineGraph = svgGDP.selectAll(".lineGraph")                   
           .data(sumstat);
 
-    //var container = document.querySelector(selector+"GDP"+">g");
-    //var matches = container.getElementsByClassName("lineGraph");
-    //console.log(matches);
-
 //----Append a g tag for each line and set of tooltip circles and give it a unique ID based on the column name of the data        
     var lineGraphEnter = lineGraph.enter().append("g") 
             .attr("clip-path","url(#clip)")
@@ -291,9 +284,6 @@ console.log(tooltipGDP);
                 .style("opacity",1);        
               d3.select(getcountry)
                 .attr("class", "legend");}); 
-
-   
-
                 
   // Draw the lines
     lineGraphEnter.append("path")
@@ -302,6 +292,8 @@ console.log(tooltipGDP);
           .attr("fill", "none")
           .attr("stroke",function(d){ return color(d.key) })
           .attr("d", function(d){ return line(d.values)});   
+
+
 //-------POINTS-------------------------------------------------------//
     var circles=lineGraphEnter.selectAll("points")
           .data(function(d){return d.values})
@@ -354,7 +346,8 @@ console.log(tooltipGDP);
           .attr("class","point")
           .style("opacity", 1);
 
-//---------------------------TOOLTIP-----------------------------//    
+//---------------------------TOOLTIP-----------------------------//   
+
 lineGraphEnter.selectAll("circles")
     .data(function(d) { return(d.values); } )
     .enter()
@@ -444,6 +437,7 @@ lineGraphEnter.selectAll("circles")
     });
 
 //---------------LEGEND----------------------------------------//
+
    //Append the legend
     var legend = svgGDP.selectAll('.legend')
         .data(sumstat);
@@ -490,7 +484,7 @@ lineGraphEnter.selectAll("circles")
     //Add the rectangles to the created legend container
       var size = 12;  
       legendEnter.append("rect")
-          .attr("x", function(d,i){ return 200 + i*(size+50)})
+          .attr("x", function(d,i){ return 250 + i*(size+50)})
           .attr("y", 430) // 430 is where the first rect appears. 
           .attr("width", size)
           .attr("height", size)
@@ -499,7 +493,7 @@ lineGraphEnter.selectAll("circles")
                  
     //Add the legend text
       legendEnter.append('text')
-          .attr("x", function(d,i){ return 200 + i*(size+50) } ) 
+          .attr("x", function(d,i){ return 250 + i*(size+50) } ) 
           .attr("y", 430 + size*1.2 +10) // 430 is where the first rect appears. plus the distance between rect
           .style("fill", function(d){ return color(d.key)})
           .text(function(d){ return d.key})
@@ -513,6 +507,7 @@ lineGraphEnter.selectAll("circles")
           .style("fill", "#dee7fa")
           .text("CLICK TO FILTER BY COUNTRY: ")
           .attr("font-weight","bold")
+          .att("font-size","10px")
           .attr("text-anchor", "left")
           .style("alignment-baseline", "middle"); 
 
@@ -974,7 +969,7 @@ lineGraphEnter.selectAll("circles")
     //Add the rectangles to the created legend container
       var size = 12;  
       legendEnter.append("rect")
-          .attr("x", function(d,i){ return 200 + i*(size+50)})
+          .attr("x", function(d,i){ return 250 + i*(size+50)})
           .attr("y", 430) // 100 is where the first dot appears. 25 is the distance between dots
           .attr("width", size)
           .attr("height", size)
@@ -983,7 +978,7 @@ lineGraphEnter.selectAll("circles")
                  
     //Add the legend text
       legendEnter.append('text')
-          .attr("x", function(d,i){ return 200 + i*(size+50) } ) 
+          .attr("x", function(d,i){ return 250 + i*(size+50) } ) 
           .attr("y", 430 + size*1.2 +10) // 100 is where the first dot appears. 25 is the distance between dots
           .style("fill", function(d){ return color(d.key)})
           .text(function(d){ return d.key})
@@ -996,6 +991,7 @@ lineGraphEnter.selectAll("circles")
           .attr("y", 435) // 430 is where the first rect appears. 
           .style("fill", "#dee7fa")
           .text("CLICK TO FILTER BY COUNTRY: ")
+          .attr("font-size","10px")
           .attr("font-weight","bold")
           .attr("text-anchor", "left")
           .style("alignment-baseline", "middle");

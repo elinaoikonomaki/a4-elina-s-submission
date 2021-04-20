@@ -7,7 +7,6 @@
     <script src="https://d3js.org/d3-fetch.v2.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" charset="utf-8"></script>
     <script type="text/javascript" src="jquery.tipsy.js"></script>
-    <!--<script src="lib/d3v4+jetpack.js"></script>-->
 
     <script src="main15.js" defer></script>
   </head>
@@ -18,50 +17,55 @@
         <div id="authors">
             Kii Kang Elina Oikonomaki Megan Prakash 
         </div>
-
-    <div class="body-copy">
-            Humanity worldwide is continually developing new technology. Innovations such
+    </div> 
+    <div class="intro-container">
+        <div class="main-intro">
+            <p>Humanity worldwide is continually developing new technology. Innovations such
             as the telephone, TV, and internet permanently change global communication, and
             adoption of novel technology is very disproportionate between countries.
+            </p>
             <p>
             Throughout the history of technology adoption documented in our dataset, a
             country's GDP is strongly correlated with how quickly it is able to adopt
             its use of a technology per capita. However, particular smaller countries like Japan and Germany
             often acquire technology disproportionately quickly.
+            </p>
             <p>
-            Scroll on to see how these trends manifest throughout communications technology in the 20th century.
-      </div><br>
-    <div style="font-size: 9pt; font-style: italic;">
-            All y-axes are log scale and describe the total number of devices in a given country in a particular year.
+            Scroll on to see how these trends manifest throughout communications technology in the 20th century.</p>
+        </div>
+        <div class="notes-intro" style="font-size: 11pt; font-style: italic;">
+            <p>All y-axes are log scale and describe the total number of devices in a given country in a particular year.
             We chose not to do technology per capita, because the rate of technology acquisition is not related to
             a country’s population.
+            </p>
             <p>
             The issue with relating the two is particularly noticeable with the extremely
             populous China and India, where a large segment of the population is less privileged with access to new
             technology. Measuring technology per capita causes those countries to score very low compared to the rest
             of the world. On the other hand, technology acquisition showed a strong correlation with country GDP.
+            </p>
+
+            <p>
+              Trends to be aware of: countries with higher GDP have a strong tendency to acquire new technology more rapidly, but particular smaller countries like Japan and Germany often acquire technology disproportionately quickly. 
+            </p>
             <p>
             Dataset:
             <a href="https://github.com/datasets/historical-adoption-of-technology" target="_blank">
                 Cross-country Historical Adoption of Technology (CHAT) dataset </a> with discussion
             <a href="https://www.nber.org/system/files/working_papers/w15319/w15319.pdf" target="_blank">here.</a>
+            </p>
         </div>
     </div> 
     
       <div id= 'section1' class="rows">
           <div class="inner">
-            <h2>1877</h2>
-            <h3>Invention of the Telephone</h3>
-            <p>1876 saw the invention of the telephone by Alexander Graham Bell in the USA, who later visited
-                Japan personally in 1877 to demonstrate the technology. [2]
-                From 1876, the USA led the world in telephone use, reaching as many as 180 million telephones in 1980
-                while the rest of the world adopted telephones much more slowly. In particular, Japan had
-                the next most telephones, at 48 million when the U.S. reached its peak.</p>
-            <p>1876 saw the invention of the telephone by Alexander Graham Bell in Boston, USA, which other countries soon
-                rushed to replicate [1]. The most successful countries of the century in telephone acquisition were the USA
-                and Germany, who had rapidly set up commercial telephone manufacturing by 1877 [2]. The USA led the world in
-                adopting telephones with 1.3 million telephones by 1900, while Germany came in second with 306,000.
-              </p>
+            <h2>TELEPHONE</h2>
+            <h3>Invention of the Telephone - 1876</h3>
+            <p>1876 saw the invention of the telephone by Alexander Graham Bell in Boston, USA, which other countries soon rushed to replicate [1]. The most successful countries of the century in telephone acquisition were the USA and Germany, who had rapidly set up commercial telephone manufacturing by 1877 [2]. The USA led the world in adopting telephones with 1.3 million telephones by 1900, while Germany came in second with 306,000.</p>
+            <p style="font-style:italic;" style="color:#ccd4e6;"> References
+              <a href= "https://en.wikipedia.org/wiki/History_of_the_telephone" target="_blank"> [1] </a>
+              <a href= "http://oldtelephones.com/blog/2012/09/04/bells-telephone-in-germany/" target="_blank"> [2] </a>
+            </p>
             </div>
             <div class="graph">
               <button class = "buttonGDP"onclick="turnOnGDP(1)">Show GDP Graph</button>
@@ -71,22 +75,19 @@
           </div>
       <div id= 'section2' class="rows">
           <div class="inner">
-            <h2>1920</h2>
-            <h3>Invention of the Radio</h3>
+            <h2>RADIO</h2>  
+            <h3>First commercial Radio broadcast - 1920</h3>
+            <h4>Line Chart Year Range [1920,2000]</h4>
             <p>
-            Radio was patented in 1896 by Guglielmo Marconi, and the world began to develop applications for
-            this novel long-range communication technology. In particular, the 1910s saw the development
-            of entertainment broadcast stations, radio communications for aircraft, and even the early stages
-            of television, using radio to broadcast images.</p>
-            <h2>1980</h2>
-            <h3>First commercial radio broadcast</h3>
+            On November 2, 1920, the radio station KDKA in Pittsburgh, USA made the first ever commercial radio broadcast. [3] Decades prior, the Italian inventor Gugliermo Marconi had demonstrated radio communication in 1899. Though the USA was not considered to be the world leader in scientific and engineering innovation pre-1920, the American companies General Electric (GE), American Telephone and Telegraph (AT&T) and Westinghouse convened to form the Radio Company of America (RCA) and accelerate radio development in the USA. 
             <p>
-            “On November 2, 1920, station KDKA made the nation's first commercial broadcast
-            (a term coined by Conrad himself). They chose that date because it was election day,
-             and the power of radio was proven when people could hear the results of the Harding-Cox
-              presidential race before they read about it in the newspaper.” [1]
-              <a href = "http://www.pbs.org/wgbh/aso/databank/entries/dt20ra.html" target = "_blank">Information about radio.</a>
-              </p>
+            The earliest data for the number of radios in the USA is from 1938; by that year, the USA led with 40,800 radios, followed by Germany with 9,575, Russia with 5,624, and Japan with 4,166. The noise seen in the median lines in these graphs can be attributed to instances of missing data. </p>
+
+            <p style="font-style:italic;" style="color:#ccd4e6;"> References
+              <a href= "http://www.pbs.org/wgbh/aso/databank/entries/dt20ra.html" target="_blank"> [3] </a>
+              <a href= "https://www.sjsu.edu/faculty/watkins/radio.htm" target="_blank"> [4] </a>
+            </p>
+            
           </div>
           <div class="graph">
             <button class = "buttonGDP"onclick="turnOnGDP(2)">Show GDP Graph</button>
@@ -96,14 +97,14 @@
         </div>
         <div id= 'section3' class="rows">  
           <div class="inner">
-            <h2>1983</h2>
-            <h3>First commercially available cellular phone</h3>
+            <h2>CELLPHONE</h2>
+            <h3>First commercially available cellular phone - 1983</h3>
+            <h4>Line Chart Year Range [1980,2000]</h4>
             <p>
-            Though the world’s first cellular network had already been launched in Japan by Nippon Telegraph and
-            Telephone in 1979, it was not until 1983 when commercial cellular phone communication became available.
-            The first 1G network was launched in the USA by Chicago-based Ameritech, shortly followed by the DynaTAC
-            8000X, Motorola’s first commercial portable cellular phone.  [5] In the following graphs, the USA’s and
-            Japan’s early access to cellular phone technology is clear, though Germany is quick to catch up by 1986.
+            Though the world’s first cellular network had already been launched in Japan by Nippon Telegraph and Telephone in 1979, it was not until 1983 when commercial cellular phone communication became available.The first 1G network was launched in the USA by Chicago-based Ameritech, shortly followed by the DynaTAC 8000X, Motorola’s first commercial portable cellular phone. [5] From 1983-1985, the USA and Japan benefited from their early access to cellular phone technology,though the UK is quick to catch up by 1986. However, by 1990, the USA is an order of magnitude ahead of the others with 5.3 million cellphones compared to the UK's 1.1 million and Japan's 867,558.
+            </p>
+            <p style="font-style:italic;" style="color:#ccd4e6;"> References
+              <a href= "https://en.wikipedia.org/wiki/History_of_mobile_phones" target="_blank"> [5] </a>
             </p>
           </div>
           <div class="graph">
@@ -114,21 +115,18 @@
         </div>
         <div id= 'section4' class="rows"> 
           <div class="inner">
-            <h2>1989</h2>
-            <h3>Invention of the World Wide Web</h3>
+            <h2>INTERNET</h2>
+            <h3>Invention of the World Wide Web - 1989</h3>
+            <h4>Line Chart Year Range [1990,2000]</h4>
             <p>
-            The World Wide Web was invented in 1989 by Sir Tim Berners-Lee, an English contractor at CERN in
-            Switzerland. Berners-Lee, in particular, was the first to use computer networking technologies and markup
-            languages such as HTML to create an international, publicly-accessible network for sharing information. The
-            early adopters of the Web were academic research institutions who were peers of Berners-Lee and CERN and
-            quickly published research work as well as webcomics and animated images. [7]
+              The World Wide Web was invented in 1989 by Sir Tim Berners-Lee, an English contractor at CERN in Switzerland. Berners-Lee, in particular, was the first to use computer networking technologies and markup languages such as HTML to create an international, publicly-accessible network for sharing information. The early adopters of the Web were academic research institutions who were peers of Berners-Lee and CERN and quickly published research work as well as webcomics and animated images. [7]
             </p>
             <p>
-            The creation of the internet predates the World Wide Web by many decades, and internet innovation was
-            primarily concentrated in the USA with collaborators in the UK and in France [6]. However, by 1995,
-            it’s clear that Germany and Japan are once again disproportionately ahead of with Internet users
-            relative to their GDP, while the USA is a full order of magnitude ahead with 25.2 million users
-            compared to Japan and Germany’s 2 million.
+              The creation of the internet predates the World Wide Web by many decades, and internet innovation was primarily concentrated in the USA with collaborators in the UK and in France [6]. However, by 1995, it’s clear that Germany and Japan are once again disproportionately ahead relative to their GDP, while the USA is a full order of magnitude ahead with 25.2 million users compared to Japan and Germany’s 2 million.
+            </p>
+            <p style="font-style:italic;" style="color:#ccd4e6;"> References
+              <a href= "https://en.wikipedia.org/wiki/History_of_the_Internet" target="_blank"> [6] </a>
+              <a href= "https://en.wikipedia.org/wiki/History_of_the_World_Wide_Web" target="_blank"> [7] </a>
             </p>
           </div>
           <div class="graph">
@@ -139,12 +137,16 @@
         </div>
         <div id= 'section5' class="rows">  
           <div class="inner">
-            <h2>1991</h2>
-            <h3>The Fall of the USSR</h3>
+            <h2>POPULATION</h2>
+            <h3>The Fall of the USSR - 1991</h3>
+            <h4>Line Chart Year Range [1960,2000]</h4>
             <p>
-            The fall of the USSR in 1991 causes a distinct anomaly in the trend of world superpowers dominating
-            technology acquisition. The USSR's radio usage drastically falls post-1990, coinciding with a jump
-            upwards in China's usage.</p>
+              A noticeable quirk in the dataset is related to the fall of the Soviet Union in 1991. On a significant number of technologies, Russia (considered to be the same bucket as the Soviet Union in this dataset) dipped in technology usage during 1991 While it is known that multitudes of Soviet engineers and scientists left Russia following the dissolution of the USSR [8], a more likely explanation is that pre-1991, the “Russia” label of the dataset included the entire USSR. On the other hand, post-1991 it only includes the country of Russia and none of the sovereign states formed after the USSR’s collapse. The following graphs of population vs. GDP and population vs. year corroborate this guess, since it’s clear that the population of “Russia” dips after 1991. This dip is also apparent in the earlier graph about radio usage.
+            </p>
+            <p style="font-style:italic;" style="color:#ccd4e6;"> References
+              <a href= "https://www.rbth.com/science_and_tech/2014/09/24/computers_in_the_ussr_a_story_of_missed_opportunities_40073.html" target="_blank"> [8] </a>
+            </p>
+
           </div>
           <div class="graph">
             <button class = "buttonGDP"onclick="turnOnGDP(5)">Show GDP Graph</button>
@@ -154,19 +156,11 @@
         </div>
         <div id= 'section6'class="rows"> 
           <div class="inner">
-            
-            <h3>Fall of the Soviet Union</h3>
-            <p>1992 on wards</p>
+            <h2>INTERNET</h2>
+            <h3>1992 on wards</h3>
+            <h4>Line Chart Year Range [1992,2003]</h4>
             <p>
-            A noticeable quirk in the dataset is related to the fall of the Soviet Union in 1991. On a
-            significant number of technologies, Russia (considered to be the same bucket as the Soviet Union
-            in this dataset) dipped significantly in technology usage starting 1990. While it is known that
-            multitudes of Soviet  engineers and scientists left Russia following the dissolution of the USSR [8],
-            a more likely explanation is that pre-1991, the “Russia” label of the dataset included the entire USSR.
-            On the other hand, post-1991 it only includes the country of Russia and none of the sovereign states
-            formed after the USSR’s collapse. The following graphs of population vs. GDP and population vs. year
-            corroborate this guess, since it’s clear that the population of “Russia” dips after 1991.
-            This dip is also apparent in the earlier graph about radio usage.
+            In the remainder of the dataset, up until the last values in 2003, usage of the internet continues to increase across the world. The following graph, with the y-axis of internet users set to a logarithmic scale, shows how over time nearly all of the countries we’ve focused on have exponentially increased their internet usage. In particular, India and China have accelerated their internet usage even more rapidly than exponentially! Finally, like many of the graphs in this narrative, the median internet acquisition follows the same trend of the superpowers.
             </p>
 
           </div> 
