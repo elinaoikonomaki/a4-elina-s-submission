@@ -20,8 +20,9 @@ h1 {
 
 #authors{
   text-align: center;
-  font-size: 18px;
+  font-size: 22px;
   font-style: italic;
+  font-weight: bold;
   text-align: center;
   color: #ccd4e6;
   margin-top: 20px;
