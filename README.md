@@ -7,7 +7,7 @@
 
 ### NOTE ABOUT THE SUBMISSION
 
-Elina submitted seperately from the initial group [“megkiilina”](https://github.com/6859-sp21/a4-megkiilina).
+Elina submitted *separately* from the initial group **[“megkiilina”](https://github.com/6859-sp21/a4-megkiilina)**.
 
 The text of the narrative and dataset remain the same as with the original group “megkiilina” but ***the website and graph development as well as the interaction development in this repository is only part of Elina's submission.***
 
