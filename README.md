@@ -4,13 +4,6 @@
 
 ## https://elinaoikonomaki.github.io/a4-elina-s-submission/
 
-
-### NOTE ABOUT THE SUBMISSION
-
-Elina submitted ***separately*** from the initial group **[“megkiilina”](https://github.com/6859-sp21/a4-megkiilina)**.
-
-The text of the narrative and dataset remain the same as with the original group “megkiilina” but ***the website*** and ***graph development*** as well as ***the interaction development*** **in this repository is only part of Elina's submission and work.**
-
 ### The dataset
 
 The dataset includes over 100 technologies in its collection, but many of the technologies have very sparse data across all the countries and years. We decided to focus on communications inventions because it seemed to follow naturally from thinking about worldwide adoption of technology, plus the data for 20th century communications inventions was some of the most dense available in the CHAT dataset.
